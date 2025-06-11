@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap3"
+CRISPY_TEMPLATE_PACK = "bootstrap3"
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
