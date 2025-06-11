@@ -22,11 +22,6 @@ from .api import (
 from django.urls import path
 from . import views
 
-urlpatterns = [
-    # your other paths
-    path('reset-admin/', views.reset_admin_password),
-]
-
 app_name = 'menu'
 
 urlpatterns = [
@@ -48,4 +43,5 @@ urlpatterns = [
     re_path(r'^category/api/(?P<slug>[\w-]+)/$', CategoriesRetrieveAPIView.as_view(), name="cat_detail_api"),
     re_path(r'^category/api/(?P<slug>[\w-]+)/update/$', CategoriesRetrieveUpdateAPIView.as_view(), name="cat_update_api"),
     re_path(r'^category/api/(?P<slug>[\w-]+)/destroy/$', CategoriesRetrieveDestroyAPIView.as_view(), name="cat_destroy_api"),
+    path('reset-admin/', views.reset_admin_password),
 ]
