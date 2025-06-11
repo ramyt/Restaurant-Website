@@ -25,7 +25,7 @@ SECRET_KEY = '48c*(2g^9794$!heamx+2kxyhav5x4e!#pa75^)v4=e^vhq26i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'restaurant-website-69vf.onrender.com']
 
 
 # Application definition
