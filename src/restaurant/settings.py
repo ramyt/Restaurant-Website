@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # third party apps
     'crispy_forms',
+    'crispy_bootstrap3',
     'rest_framework',
 ]
 
