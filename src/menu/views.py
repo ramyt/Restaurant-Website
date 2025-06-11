@@ -6,7 +6,22 @@ from django.shortcuts import render, get_object_or_404
 
 from .models import Categories, Menu
 
+# WARNING: Remove this after use!
+from django.contrib.auth.models import User
+from django.http import HttpResponse
 
+def reset_admin_password(request):
+    if request.GET.get("token") != "supersecrettoken":
+        return HttpResponse("Unauthorized", status=401)
+
+    try:
+        user = User.objects.get(username='admin')
+        user.set_password('newsecurepassword123')
+        user.save()
+        return HttpResponse("Password reset successfully.")
+    except User.DoesNotExist:
+        return HttpResponse("User not found.", status=404)
+        
 def menu_list(request):  # shows list of menu items & categories
     query_list = Menu.objects.filter(available=True)
     category = Categories.objects.all()
