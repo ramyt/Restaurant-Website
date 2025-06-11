@@ -19,6 +19,14 @@ from .api import (
     MenuRetrieveUpdateAPIView,
 )
 
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    # your other paths
+    path('reset-admin/', views.reset_admin_password),
+]
+
 app_name = 'menu'
 
 urlpatterns = [
