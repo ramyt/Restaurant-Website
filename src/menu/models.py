@@ -49,7 +49,7 @@ class Categories(models.Model):
 
 class Menu(models.Model):
     item = models.CharField(max_length=120, unique=True)
-    category = models.ForeignKey(Categories)
+    category = models.ForeignKey(Categories, on_delete=models.SET_NULL) #models.CASCADE, models.PROTECT
     price = models.DecimalField(max_digits=5, decimal_places=2)
     info = models.TextField()
     policy = models.TextField()
