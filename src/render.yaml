@@ -9,4 +9,4 @@ services:
       - key: DJANGO_SETTINGS_MODULE
         value: restaurant.settings
       - key: PYTHON_VERSION
-        value: 3.6.15
+        value: 3.7.3
